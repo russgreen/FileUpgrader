@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>FileUpgrader</Name>
+    <Assembly>FileUpgrader/FileUpgrader.dll</Assembly>
+    <ClientId>D380839A-5AAE-478D-ABF8-F4C29FAFC499</ClientId>
+    <FullClassName>FileUpgrader.App</FullClassName>
+    <VendorId>ARBG</VendorId>
+  </AddIn>
+</RevitAddIns>
