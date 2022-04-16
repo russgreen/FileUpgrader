@@ -13,6 +13,8 @@ class App : IExternalApplication
 {
     public static UIControlledApplication cachedUiCtrApp;
 
+    private readonly string _tabName = "RG Tools";
+
     public Result OnShutdown(UIControlledApplication application)
     {
         return Result.Succeeded;
@@ -35,7 +37,7 @@ class App : IExternalApplication
         // Check if "Archisoft Tools already exists and use if its there
         try
         {
-            panel = cachedUiCtrApp.CreateRibbonPanel("Archisoft Tools", Guid.NewGuid().ToString());
+            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
             panel.Name = "ARBG_FileUpgrader_ExtApp";
             panel.Title = "File Upgrader";
         }
@@ -52,13 +54,19 @@ class App : IExternalApplication
                         archisoftPanel = true;
                         break;
                     }
+                    
+                     if (folder.ToLower().Contains("rg") == true & folder.ToLower().Contains("rg fileupgrader") == false)
+                    {
+                        archisoftPanel = true;
+                        break;
+                    }                   
                 }
             }
 
             if (archisoftPanel == true)
             {
-                cachedUiCtrApp.CreateRibbonTab("Archisoft Tools");
-                panel = cachedUiCtrApp.CreateRibbonPanel("Archisoft Tools", Guid.NewGuid().ToString());
+                cachedUiCtrApp.CreateRibbonTab(_tabName);
+                panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
                 panel.Name = "ARBG_FileUpgrader_ExtApp";
                 panel.Title = "File Upgrader";
             }

@@ -1,15 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <Configurations>2022;2023</Configurations>
+    <Configurations>2021;2022;2023</Configurations>
     <Platforms>x64</Platforms>
     <Description>Upgrade Revit files to the latest version</Description>
     <Copyright>Copyright © Russell Green</Copyright>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <UseWindowsForms>true</UseWindowsForms>
-	  <LangVersion>10</LangVersion>
+	<LangVersion>10</LangVersion>
   </PropertyGroup>
-  
+
+	<PropertyGroup Condition="'$(Configuration)' == '2021'">
+		<TargetFramework>net48</TargetFramework>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == '2022'">
     <TargetFramework>net48</TargetFramework>
     <Optimize>false</Optimize>
