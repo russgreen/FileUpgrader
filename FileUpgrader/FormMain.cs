@@ -11,20 +11,24 @@ namespace FileUpgrader;
 
 public partial class FormMain : System.Windows.Forms.Form
 {
-    ExternalCommandData _commandData;
+    private ExternalCommandData _commandData;
+    private UIDocument _uiDoc;
+    private UIApplication _uiApp;
+    private Document _doc;
 
-    IList<FileInfo> _files = new List<FileInfo>();
-    IList<String> _failures = new List<String>();
+    private IList<FileInfo> _files = new List<FileInfo>();
+    private IList<String> _failures = new List<String>();
 
-    StreamWriter _writer = null;
+    private StreamWriter _writer = null;
 
-    bool _cancelled = false;
-    bool _addInfo = false;
+    private bool _cancelled = false;
+    private bool _addInfo = false;
 
-    int _success;
-    int _failed;
+    private int _success;
+    private int _failed;
 
-    UIDocument previousDocument = null;
+    private UIDocument _previousDocument = null;
+
 
     public FormMain(ExternalCommandData commandData)
     {
@@ -72,6 +76,7 @@ public partial class FormMain : System.Windows.Forms.Form
         this.sfDataGrid1.View.Refresh();
 
         this.toolStripProgressBar1.Maximum = _files.Count - 1;
+        this.toolStripProgressBar1.Step = 1;
     }
 
     private void btnCancel_Click(object sender, EventArgs e)
@@ -89,6 +94,7 @@ public partial class FormMain : System.Windows.Forms.Form
             if (_cancelled == false && file.IsReadOnly == false)
             {
                Upgrade(file);
+               Application.DoEvents();
             }
         }
 
@@ -103,34 +109,30 @@ public partial class FormMain : System.Windows.Forms.Form
         try
         {
             // Open a Revit file as an active document. 
-            
             OpenOptions openOpt = new OpenOptions();
             openOpt.DetachFromCentralOption = DetachFromCentralOption.DetachAndPreserveWorksets;
 
             ModelPath modelPath = new FilePath(file.FullName);
 
-            UIApplication UIApp = _commandData.Application;
-
-            UIDocument UIDoc = UIApp.OpenAndActivateDocument(modelPath, openOpt, true);
-            //UIDocument UIDoc = UIApp.OpenAndActivateDocument(file.FullName);
-
-            Document doc = UIDoc.Document;
+            _uiApp = _commandData.Application;
+            _uiDoc = _uiApp.OpenAndActivateDocument(modelPath, openOpt, true);
+            _doc = _uiDoc.Document;
 
             // Try closing the previously opened document after 
             // another one is opened. We are doing this because we 
             // cannot explicitely close an active document
             //  at a moment.  
 
-            if(previousDocument != null)
+            if(_previousDocument != null)
             {
-                previousDocument.SaveAndClose();
+                _previousDocument.SaveAndClose();
             }
 
             // Save the Revit file to the target destination.
             // Since we are opening a file as an active document, 
             // it takes care of preview. 
 
-            if (doc.IsWorkshared)
+            if (_doc.IsWorkshared)
             {
                 WorksharingSaveAsOptions wsOpt = new WorksharingSaveAsOptions();
                 wsOpt.SaveAsCentral = true;
@@ -139,23 +141,20 @@ public partial class FormMain : System.Windows.Forms.Form
                 opt.OverwriteExistingFile = true;
                 opt.SetWorksharingOptions(wsOpt);
                     
-                doc.SaveAs(file.FullName, opt);
+                _doc.SaveAs(file.FullName, opt);
             }
             else
             {
                 //String destinationFile = destPath + "\\" + file.Name;
-                doc.Save(); //  .SaveAs(file.Name);
-            }
-
-
+                _doc.Save(); //  .SaveAs(file.Name);
+            }         
 
             // Saving the current document to close it later.   
             // If we had a method to close an active document, 
             // we want to close it here. However, since we opened 
             // it as an active document, we cannot do so.
             // We'll close it after the next file is opened.
-
-            previousDocument = UIDoc;
+            _previousDocument = _uiDoc;
            
             // Set variable to know if upgrade 
             // was successful - for status updates
@@ -187,4 +186,5 @@ public partial class FormMain : System.Windows.Forms.Form
     {
         toolStripProgressBar1.Width = statusStrip1.Width - 20;
     }
+
 }

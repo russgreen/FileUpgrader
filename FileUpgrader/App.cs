@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.Attributes;
@@ -25,7 +25,7 @@ class App : IExternalApplication
         cachedUiCtrApp = application;
         var ribbonPanel = CreateRibbonPanel();
 
-        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDI5MTU0QDMxMzkyZTMxMmUzMFRYNXJ4UkFXd24waElSUGZwTWszc20yaldkWk0vaHZRdTlpbktHU0dzSTg9");
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("##SyncfusionLicense##");
 
         return Result.Succeeded;
     }
