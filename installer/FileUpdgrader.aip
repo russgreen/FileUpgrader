@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="21.4" version="21.4" Modules="simple" RootPath="." Language="en_GB" Id="{8456BFAE-17F8-40EC-B003-58E5972B30E6}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="Russ Green"/>
+    <ROW Property="ProductCode" Value="2057:{04F79833-5480-4A7B-A934-B643DCA760DC} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="FileUpgrader"/>
+    <ROW Property="ProductVersion" Value="1.1.3" Options="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{830389A8-1EC5-434F-A3E4-2E3F8FA7CB1A}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60Display" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Addins_Dir" Directory_Parent="Revit_Dir" DefaultDir="Addins"/>
+    <ROW Directory="Autodesk_Dir" Directory_Parent="CommonAppDataFolder" DefaultDir="Autodesk"/>
+    <ROW Directory="CommonAppDataFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonAppDataFolder" IsPseudoRoot="1"/>
+    <ROW Directory="FileUpgrader_1_Dir" Directory_Parent="__1_Dir" DefaultDir="FILEUP~1|FileUpgrader"/>
+    <ROW Directory="FileUpgrader_2_Dir" Directory_Parent="__2_Dir" DefaultDir="FILEUP~1|FileUpgrader"/>
+    <ROW Directory="FileUpgrader_3_Dir" Directory_Parent="__3_Dir" DefaultDir="FILEUP~1|FileUpgrader"/>
+    <ROW Directory="FileUpgrader_4_Dir" Directory_Parent="__4_Dir" DefaultDir="FILEUP~1|FileUpgrader"/>
+    <ROW Directory="FileUpgrader_Dir" Directory_Parent="__Dir" DefaultDir="FILEUP~1|FileUpgrader"/>
+    <ROW Directory="Revit_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="Revit"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="__1_Dir" Directory_Parent="Addins_Dir" DefaultDir="2022"/>
+    <ROW Directory="__2_Dir" Directory_Parent="Addins_Dir" DefaultDir="2023"/>
+    <ROW Directory="__3_Dir" Directory_Parent="Addins_Dir" DefaultDir="2024"/>
+    <ROW Directory="__4_Dir" Directory_Parent="Addins_Dir" DefaultDir="2025"/>
+    <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2021"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{98AF57B0-8734-49BB-9F49-D33300BB8CE2}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="FileUpgrader.addin" ComponentId="{BF799250-D188-42DD-BAD1-2A073F75CEB2}" Directory_="__4_Dir" Attributes="0" KeyPath="FileUpgrader.addin" Type="0"/>
+    <ROW Component="FileUpgrader.addin_1" ComponentId="{89BA1012-9006-48C2-ADAB-E834712A6A8C}" Directory_="__3_Dir" Attributes="0" KeyPath="FileUpgrader.addin_1" Type="0"/>
+    <ROW Component="FileUpgrader.addin_2" ComponentId="{04A81BD4-71FF-4846-8597-F0D5AC159259}" Directory_="__2_Dir" Attributes="0" KeyPath="FileUpgrader.addin_2" Type="0"/>
+    <ROW Component="FileUpgrader.addin_3" ComponentId="{00484035-D1B6-4F77-AA06-7F99C6E66D02}" Directory_="__1_Dir" Attributes="0" KeyPath="FileUpgrader.addin_3" Type="0"/>
+    <ROW Component="FileUpgrader.addin_4" ComponentId="{DF941BB0-33A5-4CFA-A6EB-747A18C57D83}" Directory_="__Dir" Attributes="0" KeyPath="FileUpgrader.addin_4" Type="0"/>
+    <ROW Component="FileUpgrader.deps.json" ComponentId="{BAC8C819-278C-4CAC-BD56-50CD55FD3806}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="FileUpgrader.deps.json" Type="0"/>
+    <ROW Component="FileUpgrader.dll" ComponentId="{B142B9DF-FFA3-49A3-B9DB-1BE6185532FA}" Directory_="FileUpgrader_4_Dir" Attributes="256" KeyPath="FileUpgrader.dll"/>
+    <ROW Component="FileUpgrader.dll_1" ComponentId="{FB6039E0-B107-4B76-AE8C-AE1ACEB1E280}" Directory_="FileUpgrader_3_Dir" Attributes="256" KeyPath="FileUpgrader.dll_1"/>
+    <ROW Component="FileUpgrader.dll_2" ComponentId="{2ACAFF8B-AE16-4419-BCB9-FA7CEDCA9493}" Directory_="FileUpgrader_2_Dir" Attributes="256" KeyPath="FileUpgrader.dll_2"/>
+    <ROW Component="FileUpgrader.dll_3" ComponentId="{716ECE52-E7F8-486E-AA7C-7770E0F6F5F0}" Directory_="FileUpgrader_1_Dir" Attributes="256" KeyPath="FileUpgrader.dll_3"/>
+    <ROW Component="FileUpgrader.dll_4" ComponentId="{1254861B-EAA8-48C7-A388-6CCD18691FD1}" Directory_="FileUpgrader_Dir" Attributes="256" KeyPath="FileUpgrader.dll_4"/>
+    <ROW Component="ProductInformation" ComponentId="{11528EDE-E84A-4A8D-AD41-7899230A1B6F}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Syncfusion.Core.WinForms.dll" ComponentId="{1008D992-07B6-45B2-A9E4-6924CC204F4F}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.Core.WinForms.dll"/>
+    <ROW Component="Syncfusion.Core.WinForms.dll_1" ComponentId="{779D4B2B-1DF3-4F94-A8B9-468CB7DE3E67}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.Core.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.Core.WinForms.dll_2" ComponentId="{A4E81ED3-C319-4E21-81E9-29E900E2E17E}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.Core.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.Core.WinForms.dll_3" ComponentId="{D23E906A-F4FA-428D-8FB4-744CBC856D64}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.Core.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.Core.WinForms.dll_4" ComponentId="{33B6AC3F-D465-4E3B-A835-423790D751A6}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.Core.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.Data.WinForms.dll" ComponentId="{0F1988E2-BF64-4F49-AF1B-B767DF969FB0}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.Data.WinForms.dll"/>
+    <ROW Component="Syncfusion.Data.WinForms.dll_1" ComponentId="{FCACD003-E8B7-495E-B320-AB2F11D04F14}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.Data.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.Data.WinForms.dll_2" ComponentId="{A6AF84A1-14A2-4256-A116-38A078BEC138}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.Data.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.Data.WinForms.dll_3" ComponentId="{B9E12928-BFE6-48DA-84F6-DE676C4AB52A}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.Data.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.Data.WinForms.dll_4" ComponentId="{894C6B1F-5A59-49B2-9780-9024B187A9E2}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.Data.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.DataSource.WinForms.dll" ComponentId="{AD141052-C834-41B4-853C-15FFB27DE4BD}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.DataSource.WinForms.dll"/>
+    <ROW Component="Syncfusion.DataSource.WinForms.dll_1" ComponentId="{99042995-C267-40D5-965E-E3106C70EF63}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.DataSource.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.DataSource.WinForms.dll_2" ComponentId="{7966AADE-755F-4E24-A19B-30F126CD0DAA}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.DataSource.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.DataSource.WinForms.dll_3" ComponentId="{27FE3573-CA56-45FC-A356-EDD08EF04645}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.DataSource.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.DataSource.WinForms.dll_4" ComponentId="{F61A3FEE-7947-4C0D-818E-4916A98316F5}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.DataSource.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.GridCommon.WinForms.dll" ComponentId="{F041ECDA-CD3B-4C1C-8785-C3880C55BCE7}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.GridCommon.WinForms.dll"/>
+    <ROW Component="Syncfusion.GridCommon.WinForms.dll_1" ComponentId="{AB09EEBE-F45C-4E15-A472-6B3823E38B86}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.GridCommon.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.GridCommon.WinForms.dll_2" ComponentId="{FF886B86-4130-48FE-9B5A-529C6F30B581}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.GridCommon.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.GridCommon.WinForms.dll_3" ComponentId="{A72B6EEA-8537-4311-A7BF-1E8EF4AF4B73}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.GridCommon.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.GridCommon.WinForms.dll_4" ComponentId="{EE2A2F15-E039-4B23-94B1-2C2EC90DF045}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.GridCommon.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.Licensing.dll" ComponentId="{975C4736-4EF3-4EA8-A4F7-66C0358A1C2C}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll"/>
+    <ROW Component="Syncfusion.Licensing.dll_1" ComponentId="{E6F84BE3-67FE-4112-A36C-497B84437DED}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_1"/>
+    <ROW Component="Syncfusion.Licensing.dll_2" ComponentId="{22CAD2B7-C4E3-4754-A410-B389DF2F525C}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_2"/>
+    <ROW Component="Syncfusion.Licensing.dll_3" ComponentId="{AA06C1A1-93F7-457A-9898-D8D2AF27CEDD}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_3"/>
+    <ROW Component="Syncfusion.Licensing.dll_4" ComponentId="{A0B0E883-62BD-4274-8F5F-F24778B69244}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_4"/>
+    <ROW Component="Syncfusion.SfDataGrid.WinForms.dll" ComponentId="{815FC53F-4D97-4AB8-AD96-19B6EF1C77A6}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.SfDataGrid.WinForms.dll"/>
+    <ROW Component="Syncfusion.SfDataGrid.WinForms.dll_1" ComponentId="{777462A3-BAE9-43E3-90FC-ACA802C12C0E}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.SfDataGrid.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.SfDataGrid.WinForms.dll_2" ComponentId="{FA515840-B37C-493B-A326-51C19CD00DF7}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.SfDataGrid.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.SfDataGrid.WinForms.dll_3" ComponentId="{8DFA02E9-840A-48B5-BA2D-3C10208E3CD9}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.SfDataGrid.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.SfDataGrid.WinForms.dll_4" ComponentId="{FFC35F76-6448-4C2B-9E05-C697A2339837}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.SfDataGrid.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.SfInput.WinForms.dll" ComponentId="{D76978AD-6FED-48E9-BD72-95C52CC3D68F}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.SfInput.WinForms.dll"/>
+    <ROW Component="Syncfusion.SfInput.WinForms.dll_1" ComponentId="{3020F202-C07C-4D30-8404-137514CE8B3C}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.SfInput.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.SfInput.WinForms.dll_2" ComponentId="{26FEA16C-171B-4936-8C43-03DA0144957D}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.SfInput.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.SfInput.WinForms.dll_3" ComponentId="{01CFA43A-846D-4A92-B8B4-3D791EDE38BD}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.SfInput.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.SfInput.WinForms.dll_4" ComponentId="{F5840545-6A75-42D3-BE4F-AA6A051E18B2}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.SfInput.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.SfListView.WinForms.dll" ComponentId="{92A4B9D7-18D4-45E2-8E61-8A4323C43564}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.SfListView.WinForms.dll"/>
+    <ROW Component="Syncfusion.SfListView.WinForms.dll_1" ComponentId="{B6D79608-E917-45F6-93AB-3EB86E25B46F}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.SfListView.WinForms.dll_1"/>
+    <ROW Component="Syncfusion.SfListView.WinForms.dll_2" ComponentId="{2AC6A64F-3A87-424E-8AD3-4F953F10141A}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.SfListView.WinForms.dll_2"/>
+    <ROW Component="Syncfusion.SfListView.WinForms.dll_3" ComponentId="{0C2693D4-0A4F-437B-AD16-416521DEF6B8}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.SfListView.WinForms.dll_3"/>
+    <ROW Component="Syncfusion.SfListView.WinForms.dll_4" ComponentId="{B3FC982A-A14F-4631-9092-324197624B21}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.SfListView.WinForms.dll_4"/>
+    <ROW Component="Syncfusion.Shared.Base.dll" ComponentId="{B4BA555B-BC50-4EFA-8C68-BFAA7F74F726}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="Syncfusion.Shared.Base.dll"/>
+    <ROW Component="Syncfusion.Shared.Base.dll_1" ComponentId="{950F2895-A9BA-42B3-ADD4-C63BD115BF30}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="Syncfusion.Shared.Base.dll_1"/>
+    <ROW Component="Syncfusion.Shared.Base.dll_2" ComponentId="{606E8F63-0A37-4CD2-BEAF-58EBAB9882B6}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="Syncfusion.Shared.Base.dll_2"/>
+    <ROW Component="Syncfusion.Shared.Base.dll_3" ComponentId="{50728F23-11E1-44D7-A1EC-AE70D313CB83}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="Syncfusion.Shared.Base.dll_3"/>
+    <ROW Component="Syncfusion.Shared.Base.dll_4" ComponentId="{5FE1A5D9-FAD1-4F2E-B277-020B2A04F448}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="Syncfusion.Shared.Base.dll_4"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{BC2AE425-E0F9-4C06-B368-C4E1C5BE01B6}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.Buffers.dll_1" ComponentId="{539292F7-D645-4FFD-8049-5B8C7C19AE3F}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="System.Buffers.dll_1"/>
+    <ROW Component="System.Buffers.dll_2" ComponentId="{04E9CD09-AA12-48D8-910A-26F46D3D10FC}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="System.Buffers.dll_2"/>
+    <ROW Component="System.Buffers.dll_3" ComponentId="{B3646240-2C55-4DBF-BE8D-003CC3A5A355}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="System.Buffers.dll_3"/>
+    <ROW Component="System.Memory.dll" ComponentId="{3C72578D-B458-4482-9609-0DD877414D09}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Memory.dll_1" ComponentId="{0F1A0F52-2596-4B1B-B910-27EC91B733E6}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="System.Memory.dll_1"/>
+    <ROW Component="System.Memory.dll_2" ComponentId="{C41D6B5A-A8E6-497A-88EA-4240F7AEE1C4}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="System.Memory.dll_2"/>
+    <ROW Component="System.Memory.dll_3" ComponentId="{C44719E1-3E15-4679-B7FD-E6F43B659879}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="System.Memory.dll_3"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{ABDCADC3-3729-49D8-AC19-A54B9677A893}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll_1" ComponentId="{4DF6C6AD-028B-48CF-A747-281F63D135F6}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_1"/>
+    <ROW Component="System.Numerics.Vectors.dll_2" ComponentId="{0975DAB1-A5A8-4B8A-9625-849BBA6D01B0}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_2"/>
+    <ROW Component="System.Numerics.Vectors.dll_3" ComponentId="{FCD80229-8FF0-4424-9CCA-59913BC3198D}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_3"/>
+    <ROW Component="System.Resources.Extensions.dll" ComponentId="{BF14F146-3DB6-4E72-B3D1-E473B5DD5073}" Directory_="FileUpgrader_4_Dir" Attributes="0" KeyPath="System.Resources.Extensions.dll"/>
+    <ROW Component="System.Resources.Extensions.dll_1" ComponentId="{91FD5B39-264E-4CB9-AA3C-E8E5F7715C41}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="System.Resources.Extensions.dll_1"/>
+    <ROW Component="System.Resources.Extensions.dll_2" ComponentId="{85E034E7-0963-4B46-9A25-44C8E9B973DA}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="System.Resources.Extensions.dll_2"/>
+    <ROW Component="System.Resources.Extensions.dll_3" ComponentId="{2013B532-A08F-482A-B816-2BAD179404CF}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="System.Resources.Extensions.dll_3"/>
+    <ROW Component="System.Resources.Extensions.dll_4" ComponentId="{28CC4AB4-A298-4EF7-A314-FC9CA804E963}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="System.Resources.Extensions.dll_4"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsa_1_fe.dll" ComponentId="{7347001A-EA4C-4116-B31D-CB30EF024C58}" Directory_="FileUpgrader_2_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsa_1_fe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsa_2_fe.dll" ComponentId="{E2461E9F-F82B-45D7-987B-A72C4CFAD9C1}" Directory_="FileUpgrader_1_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsa_2_fe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsa_3_fe.dll" ComponentId="{E328AE51-F39F-493D-9A55-2319136691C0}" Directory_="FileUpgrader_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsa_3_fe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{1BCF7BBA-00B8-4B5E-B41C-B3B93809C09D}" Directory_="FileUpgrader_3_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="FileUpgrader.addin" Component_="FileUpgrader.addin" FileName="FILEUP~1.ADD|FileUpgrader.addin" Attributes="0" SourcePath="..\source\FileUpgrader\FileUpgrader.addin" SelfReg="false"/>
+    <ROW File="FileUpgrader.addin_1" Component_="FileUpgrader.addin_1" FileName="FILEUP~1.ADD|FileUpgrader.addin" Attributes="0" SourcePath="..\source\FileUpgrader\FileUpgrader.addin" SelfReg="false"/>
+    <ROW File="FileUpgrader.addin_2" Component_="FileUpgrader.addin_2" FileName="FILEUP~1.ADD|FileUpgrader.addin" Attributes="0" SourcePath="..\source\FileUpgrader\FileUpgrader.addin" SelfReg="false"/>
+    <ROW File="FileUpgrader.addin_3" Component_="FileUpgrader.addin_3" FileName="FILEUP~1.ADD|FileUpgrader.addin" Attributes="0" SourcePath="..\source\FileUpgrader\FileUpgrader.addin" SelfReg="false"/>
+    <ROW File="FileUpgrader.addin_4" Component_="FileUpgrader.addin_4" FileName="FILEUP~1.ADD|FileUpgrader.addin" Attributes="0" SourcePath="..\source\FileUpgrader\FileUpgrader.addin" SelfReg="false"/>
+    <ROW File="FileUpgrader.deps.json" Component_="FileUpgrader.deps.json" FileName="FILEUP~1.JSO|FileUpgrader.deps.json" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\FileUpgrader.deps.json" SelfReg="false"/>
+    <ROW File="FileUpgrader.dll" Component_="FileUpgrader.dll" FileName="FILEUP~1.DLL|FileUpgrader.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\FileUpgrader.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.pdb" Component_="FileUpgrader.dll" FileName="FILEUP~1.PDB|FileUpgrader.pdb" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\FileUpgrader.pdb" SelfReg="false"/>
+    <ROW File="Syncfusion.Core.WinForms.dll" Component_="Syncfusion.Core.WinForms.dll" FileName="SYNCFU~1.DLL|Syncfusion.Core.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.Core.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WinForms.dll" Component_="Syncfusion.Data.WinForms.dll" FileName="SYNCFU~2.DLL|Syncfusion.Data.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.Data.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.DataSource.WinForms.dll" Component_="Syncfusion.DataSource.WinForms.dll" FileName="SYNCFU~3.DLL|Syncfusion.DataSource.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.DataSource.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.GridCommon.WinForms.dll" Component_="Syncfusion.GridCommon.WinForms.dll" FileName="SYNCFU~4.DLL|Syncfusion.GridCommon.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.GridCommon.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll" Component_="Syncfusion.Licensing.dll" FileName="SYNCFU~5.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfDataGrid.WinForms.dll" Component_="Syncfusion.SfDataGrid.WinForms.dll" FileName="SYNCFU~6.DLL|Syncfusion.SfDataGrid.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.SfDataGrid.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfInput.WinForms.dll" Component_="Syncfusion.SfInput.WinForms.dll" FileName="SYNCFU~7.DLL|Syncfusion.SfInput.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.SfInput.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfListView.WinForms.dll" Component_="Syncfusion.SfListView.WinForms.dll" FileName="SYNCFU~8.DLL|Syncfusion.SfListView.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.SfListView.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.Base.dll" Component_="Syncfusion.Shared.Base.dll" FileName="SYNCFU~9.DLL|Syncfusion.Shared.Base.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\Syncfusion.Shared.Base.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Extensions.dll" Component_="System.Resources.Extensions.dll" FileName="SYSTEM~1.DLL|System.Resources.Extensions.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R25\System.Resources.Extensions.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.dll_1" Component_="FileUpgrader.dll_1" FileName="FILEUP~1.DLL|FileUpgrader.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\FileUpgrader.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.pdb_1" Component_="FileUpgrader.dll_1" FileName="FILEUP~1.PDB|FileUpgrader.pdb" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\FileUpgrader.pdb" SelfReg="false"/>
+    <ROW File="Syncfusion.Core.WinForms.dll_1" Component_="Syncfusion.Core.WinForms.dll_1" FileName="SYNCFU~1.DLL|Syncfusion.Core.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.Core.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WinForms.dll_1" Component_="Syncfusion.Data.WinForms.dll_1" FileName="SYNCFU~2.DLL|Syncfusion.Data.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.Data.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.DataSource.WinForms.dll_1" Component_="Syncfusion.DataSource.WinForms.dll_1" FileName="SYNCFU~3.DLL|Syncfusion.DataSource.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.DataSource.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.GridCommon.WinForms.dll_1" Component_="Syncfusion.GridCommon.WinForms.dll_1" FileName="SYNCFU~4.DLL|Syncfusion.GridCommon.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.GridCommon.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_1" Component_="Syncfusion.Licensing.dll_1" FileName="SYNCFU~5.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfDataGrid.WinForms.dll_1" Component_="Syncfusion.SfDataGrid.WinForms.dll_1" FileName="SYNCFU~6.DLL|Syncfusion.SfDataGrid.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.SfDataGrid.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfInput.WinForms.dll_1" Component_="Syncfusion.SfInput.WinForms.dll_1" FileName="SYNCFU~7.DLL|Syncfusion.SfInput.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.SfInput.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfListView.WinForms.dll_1" Component_="Syncfusion.SfListView.WinForms.dll_1" FileName="SYNCFU~8.DLL|Syncfusion.SfListView.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.SfListView.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.Base.dll_1" Component_="Syncfusion.Shared.Base.dll_1" FileName="SYNCFU~9.DLL|Syncfusion.Shared.Base.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\Syncfusion.Shared.Base.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Extensions.dll_1" Component_="System.Resources.Extensions.dll_1" FileName="SYSTEM~4.DLL|System.Resources.Extensions.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\System.Resources.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~5.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R24\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.dll_2" Component_="FileUpgrader.dll_2" FileName="FILEUP~1.DLL|FileUpgrader.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\FileUpgrader.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.pdb_2" Component_="FileUpgrader.dll_2" FileName="FILEUP~1.PDB|FileUpgrader.pdb" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\FileUpgrader.pdb" SelfReg="false"/>
+    <ROW File="Syncfusion.Core.WinForms.dll_2" Component_="Syncfusion.Core.WinForms.dll_2" FileName="SYNCFU~1.DLL|Syncfusion.Core.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.Core.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WinForms.dll_2" Component_="Syncfusion.Data.WinForms.dll_2" FileName="SYNCFU~2.DLL|Syncfusion.Data.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.Data.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.DataSource.WinForms.dll_2" Component_="Syncfusion.DataSource.WinForms.dll_2" FileName="SYNCFU~3.DLL|Syncfusion.DataSource.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.DataSource.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.GridCommon.WinForms.dll_2" Component_="Syncfusion.GridCommon.WinForms.dll_2" FileName="SYNCFU~4.DLL|Syncfusion.GridCommon.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.GridCommon.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_2" Component_="Syncfusion.Licensing.dll_2" FileName="SYNCFU~5.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfDataGrid.WinForms.dll_2" Component_="Syncfusion.SfDataGrid.WinForms.dll_2" FileName="SYNCFU~6.DLL|Syncfusion.SfDataGrid.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.SfDataGrid.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfInput.WinForms.dll_2" Component_="Syncfusion.SfInput.WinForms.dll_2" FileName="SYNCFU~7.DLL|Syncfusion.SfInput.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.SfInput.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfListView.WinForms.dll_2" Component_="Syncfusion.SfListView.WinForms.dll_2" FileName="SYNCFU~8.DLL|Syncfusion.SfListView.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.SfListView.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.Base.dll_2" Component_="Syncfusion.Shared.Base.dll_2" FileName="SYNCFU~9.DLL|Syncfusion.Shared.Base.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\Syncfusion.Shared.Base.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_1" Component_="System.Buffers.dll_1" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_1" Component_="System.Memory.dll_1" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_1" Component_="System.Numerics.Vectors.dll_1" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Extensions.dll_2" Component_="System.Resources.Extensions.dll_2" FileName="SYSTEM~4.DLL|System.Resources.Extensions.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\System.Resources.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsa_1_fe.dll" Component_="System.Runtime.CompilerServices.Unsa_1_fe.dll" FileName="SYSTEM~5.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R23\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.dll_3" Component_="FileUpgrader.dll_3" FileName="FILEUP~1.DLL|FileUpgrader.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\FileUpgrader.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.pdb_3" Component_="FileUpgrader.dll_3" FileName="FILEUP~1.PDB|FileUpgrader.pdb" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\FileUpgrader.pdb" SelfReg="false"/>
+    <ROW File="Syncfusion.Core.WinForms.dll_3" Component_="Syncfusion.Core.WinForms.dll_3" FileName="SYNCFU~1.DLL|Syncfusion.Core.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.Core.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WinForms.dll_3" Component_="Syncfusion.Data.WinForms.dll_3" FileName="SYNCFU~2.DLL|Syncfusion.Data.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.Data.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.DataSource.WinForms.dll_3" Component_="Syncfusion.DataSource.WinForms.dll_3" FileName="SYNCFU~3.DLL|Syncfusion.DataSource.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.DataSource.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.GridCommon.WinForms.dll_3" Component_="Syncfusion.GridCommon.WinForms.dll_3" FileName="SYNCFU~4.DLL|Syncfusion.GridCommon.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.GridCommon.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_3" Component_="Syncfusion.Licensing.dll_3" FileName="SYNCFU~5.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfDataGrid.WinForms.dll_3" Component_="Syncfusion.SfDataGrid.WinForms.dll_3" FileName="SYNCFU~6.DLL|Syncfusion.SfDataGrid.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.SfDataGrid.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfInput.WinForms.dll_3" Component_="Syncfusion.SfInput.WinForms.dll_3" FileName="SYNCFU~7.DLL|Syncfusion.SfInput.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.SfInput.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfListView.WinForms.dll_3" Component_="Syncfusion.SfListView.WinForms.dll_3" FileName="SYNCFU~8.DLL|Syncfusion.SfListView.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.SfListView.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.Base.dll_3" Component_="Syncfusion.Shared.Base.dll_3" FileName="SYNCFU~9.DLL|Syncfusion.Shared.Base.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\Syncfusion.Shared.Base.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_2" Component_="System.Buffers.dll_2" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_2" Component_="System.Memory.dll_2" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_2" Component_="System.Numerics.Vectors.dll_2" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Extensions.dll_3" Component_="System.Resources.Extensions.dll_3" FileName="SYSTEM~4.DLL|System.Resources.Extensions.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\System.Resources.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsa_2_fe.dll" Component_="System.Runtime.CompilerServices.Unsa_2_fe.dll" FileName="SYSTEM~5.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R22\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.dll_4" Component_="FileUpgrader.dll_4" FileName="FILEUP~1.DLL|FileUpgrader.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\FileUpgrader.dll" SelfReg="false"/>
+    <ROW File="FileUpgrader.pdb_4" Component_="FileUpgrader.dll_4" FileName="FILEUP~1.PDB|FileUpgrader.pdb" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\FileUpgrader.pdb" SelfReg="false"/>
+    <ROW File="Syncfusion.Core.WinForms.dll_4" Component_="Syncfusion.Core.WinForms.dll_4" FileName="SYNCFU~1.DLL|Syncfusion.Core.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.Core.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WinForms.dll_4" Component_="Syncfusion.Data.WinForms.dll_4" FileName="SYNCFU~2.DLL|Syncfusion.Data.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.Data.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.DataSource.WinForms.dll_4" Component_="Syncfusion.DataSource.WinForms.dll_4" FileName="SYNCFU~3.DLL|Syncfusion.DataSource.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.DataSource.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.GridCommon.WinForms.dll_4" Component_="Syncfusion.GridCommon.WinForms.dll_4" FileName="SYNCFU~4.DLL|Syncfusion.GridCommon.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.GridCommon.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_4" Component_="Syncfusion.Licensing.dll_4" FileName="SYNCFU~5.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfDataGrid.WinForms.dll_4" Component_="Syncfusion.SfDataGrid.WinForms.dll_4" FileName="SYNCFU~6.DLL|Syncfusion.SfDataGrid.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.SfDataGrid.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfInput.WinForms.dll_4" Component_="Syncfusion.SfInput.WinForms.dll_4" FileName="SYNCFU~7.DLL|Syncfusion.SfInput.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.SfInput.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfListView.WinForms.dll_4" Component_="Syncfusion.SfListView.WinForms.dll_4" FileName="SYNCFU~8.DLL|Syncfusion.SfListView.WinForms.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.SfListView.WinForms.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.Base.dll_4" Component_="Syncfusion.Shared.Base.dll_4" FileName="SYNCFU~9.DLL|Syncfusion.Shared.Base.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\Syncfusion.Shared.Base.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_3" Component_="System.Buffers.dll_3" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_3" Component_="System.Memory.dll_3" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_3" Component_="System.Numerics.Vectors.dll_3" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Extensions.dll_4" Component_="System.Resources.Extensions.dll_4" FileName="SYSTEM~4.DLL|System.Resources.Extensions.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\System.Resources.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsa_3_fe.dll" Component_="System.Runtime.CompilerServices.Unsa_3_fe.dll" FileName="SYSTEM~5.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\source\FileUpgrader\bin\x64\Release R21\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="FileUpgrader.[|ProductVersion]" Languages="en_GB" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en_GB.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.addin"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.addin_1"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.addin_2"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.addin_3"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.addin_4"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.deps.json"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Core.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.DataSource.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.GridCommon.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfDataGrid.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfInput.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfListView.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.Base.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Core.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.DataSource.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.GridCommon.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfDataGrid.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfInput.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfListView.WinForms.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.Base.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Extensions.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Core.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.DataSource.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.GridCommon.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfDataGrid.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfInput.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfListView.WinForms.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.Base.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Extensions.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsa_1_fe.dll"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Core.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.DataSource.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.GridCommon.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfDataGrid.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfInput.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfListView.WinForms.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.Base.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Extensions.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsa_2_fe.dll"/>
+    <ROW Feature_="MainFeature" Component_="FileUpgrader.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Core.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.DataSource.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.GridCommon.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfDataGrid.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfInput.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfListView.WinForms.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.Base.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Extensions.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsa_3_fe.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] can not be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] can not be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 600)" Description="[ProductName] cannot be installed on [WindowsTypeNT60Display]." DescriptionLocId="AI.LaunchCondition.NoNT60" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] can not be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
