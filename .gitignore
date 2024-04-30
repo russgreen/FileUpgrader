@@ -351,3 +351,8 @@ MigrationBackup/
 
 # Syncfusion License Key 
 SyncfusionKey.txt
+
+# Advanced Installer
+Installer/*.back.aip
+Installer/FileUpdgrader-cache/*
+Installer/FileUpdgrader-SetupFiles/*

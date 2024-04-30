@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUpgrader", "source\FileUpgrader\FileUpgrader.csproj", "{E3FE060B-15D9-4E01-9B59-A06D28847146}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{EC50F2D0-EAEA-4119-A131-D158042FE446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug R21|x64 = Debug R21|x64
@@ -46,6 +48,31 @@ Global
 		{E3FE060B-15D9-4E01-9B59-A06D28847146}.Release R24|x64.Build.0 = Release R24|x64
 		{E3FE060B-15D9-4E01-9B59-A06D28847146}.Release R25|x64.ActiveCfg = Release R25|x64
 		{E3FE060B-15D9-4E01-9B59-A06D28847146}.Release R25|x64.Build.0 = Release R25|x64
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Debug R21|x64.ActiveCfg = Debug|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Debug R22|x64.ActiveCfg = Debug|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Debug R23|x64.ActiveCfg = Debug|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Debug R24|x64.ActiveCfg = Debug|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Debug R25|x64.ActiveCfg = Debug|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R21|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R22|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R23|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R24|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R25|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16CA004A-9678-4AB3-92F3-3F5BFDDE2534}
+	EndGlobalSection
+EndGlobal
+8042FE446}.Release R22|x64.Build.0 = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R23|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R23|x64.Build.0 = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R24|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R24|x64.Build.0 = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R25|x64.ActiveCfg = Release|Any CPU
+		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R25|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

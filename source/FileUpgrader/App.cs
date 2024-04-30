@@ -13,8 +13,6 @@ class App : IExternalApplication
 {
     public static UIControlledApplication cachedUiCtrApp;
 
-    private readonly string _tabName = "RG Tools";
-
     public Result OnShutdown(UIControlledApplication application)
     {
         return Result.Succeeded;
@@ -32,49 +30,9 @@ class App : IExternalApplication
 
     private RibbonPanel CreateRibbonPanel()
     {
-        RibbonPanel panel;
-
-        // Check if "Archisoft Tools already exists and use if its there
-        try
-        {
-            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
-            panel.Name = "ARBG_FileUpgrader_ExtApp";
-            panel.Title = "File Upgrader";
-        }
-        catch
-        {
-            var archisoftPanel = false;
-            var pluginPath = @"C:\ProgramData\Autodesk\ApplicationPlugins";
-            if (System.IO.Directory.Exists(pluginPath) == true)
-            {
-                foreach (var folder in System.IO.Directory.GetDirectories(pluginPath))
-                {
-                    if (folder.ToLower().Contains("archisoft") == true & folder.ToLower().Contains("archisoft fileupgrader") == false)
-                    {
-                        archisoftPanel = true;
-                        break;
-                    }
-                    
-                     if (folder.ToLower().Contains("rg") == true & folder.ToLower().Contains("rg fileupgrader") == false)
-                    {
-                        archisoftPanel = true;
-                        break;
-                    }                   
-                }
-            }
-
-            if (archisoftPanel == true)
-            {
-                cachedUiCtrApp.CreateRibbonTab(_tabName);
-                panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
-                panel.Name = "ARBG_FileUpgrader_ExtApp";
-                panel.Title = "File Upgrader";
-            }
-            else
-            {
-                panel = cachedUiCtrApp.CreateRibbonPanel("File Upgrader");
-            }
-        }
+        RibbonPanel panel = cachedUiCtrApp.CreateRibbonPanel(nameof(FileUpgrader));
+        panel.Name = "ARBG_FileUpgrader_ExtApp";
+        panel.Title = "File Upgrader";
 
         PushButtonData pbData = new PushButtonData("File Upgrader", "File Upgrader", Assembly.GetExecutingAssembly().Location, "FileUpgrader.cmdFileUpgrader");
         pbData.AvailabilityClassName = "FileUpgrader.Availability";
