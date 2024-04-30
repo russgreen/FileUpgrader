@@ -8,4 +8,8 @@
 # FileUpgrader
 Revit addin to batch upgrade RVT and RFA files to the current Revit version
 
+## Building the Solution
+The UI used Syncfusion controls and so a license key should be obtained (free community versions are available). The key should be stored in a text file in the root of the repo called SyncfusionKey.txt (excluded from Git). 
+
+
 
