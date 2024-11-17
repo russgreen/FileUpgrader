@@ -66,18 +66,3 @@ Global
 		SolutionGuid = {16CA004A-9678-4AB3-92F3-3F5BFDDE2534}
 	EndGlobalSection
 EndGlobal
-8042FE446}.Release R22|x64.Build.0 = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R23|x64.ActiveCfg = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R23|x64.Build.0 = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R24|x64.ActiveCfg = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R24|x64.Build.0 = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R25|x64.ActiveCfg = Release|Any CPU
-		{EC50F2D0-EAEA-4119-A131-D158042FE446}.Release R25|x64.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {16CA004A-9678-4AB3-92F3-3F5BFDDE2534}
-	EndGlobalSection
-EndGlobal
